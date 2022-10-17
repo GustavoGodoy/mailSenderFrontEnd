@@ -1,0 +1,14 @@
+<h1 class="text-center mt-5 text-primary">Lista de emails</h1>
+<input type="date" name="datr" id="date" [(ngModel)]='date'>
+<button (click)="pesquisar()" class="btn btn-primary">PESQUISAR</button>
+<div class="row d-flex">
+    <div class="card me-3 mt-3" *ngFor='let emails of emails' style="width: 25rem;">
+        <div class="card-body">
+          <h5 class="card-title">Assunto: {{emails.assuntoEmail}}</h5>
+          <p class="card-text">{{emails.corpoEmail}}</p>
+          <b>Data de envio:{{emails.dataEnvio}}</b>
+          <div>
+        </div>       
+         </div>
+      </div>
+</div>
